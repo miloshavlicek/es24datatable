@@ -43,8 +43,11 @@ $tableHtml = $table->getOutTable();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ES24Datatable Example</title>
+        <title>ES24Datatable</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="PHP class for creating tables easily">
+        <meta name="keywords" content="php,datatable,tablegrid,datagrid,table,database,class">
+        <meta name="author" content="Miloš Havlíček">
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
         <script type="text/javascript" src="../js/script.js"></script>
         <style>
