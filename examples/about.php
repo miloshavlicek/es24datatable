@@ -18,18 +18,21 @@ $col = $table->addColumn();
 $col->setHeading('Short Info');
 $col->setEditable(true);
 
-$table->addColumn();
+$table->addColumn()->setSearchable(false);
 
 $col = $table->addColumn();
 $col->setHeading('Action');
+$col->setSearchable(false);
 
 $row = $table->addRow();
 $row->setFieldContent(0,'John');
 $row->setFieldContent(1,'One man from San Francisco.');
+$row->setFieldContent(3,'<button>Edit</button><button>Delete</button>');
 
 $row = $table->addRow();
 $row->setFieldContent(0,'James');
 $row->setFieldContent(1,'Somebody from Los Angels.');
+$row->setFieldContent(3,'<button>Edit</button><button>Delete</button>');
 
 $table->setCheckable(true);
 $table->setMoveable(true);

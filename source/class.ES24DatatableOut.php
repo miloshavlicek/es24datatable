@@ -97,9 +97,12 @@ final class ES24DatatableOut {
         {
             
             $out .= '<th class="essearchbox">';
-               
-            $out .= '<input type="text" />';
-
+            
+            if($colOne->searchable===true)
+            {
+                $out .= '<input type="text" />';
+            }
+            
             $out .= '</th>';
             
             

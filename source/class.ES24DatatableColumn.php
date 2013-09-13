@@ -13,6 +13,7 @@ final class ES24DatatableColumn {
     private $cols;
     public $sortable;
     public $editable;
+    public $searchable;
     
     public function __construct(&$table)
     {
@@ -20,6 +21,7 @@ final class ES24DatatableColumn {
         $this->minWidth = 200;
         $this->sortable = false;
         $this->editable = false;
+        $this->searchable = true;
         
         $this->rows =& $table->rows;
         $this->cols =& $table->cols;
@@ -35,6 +37,14 @@ final class ES24DatatableColumn {
                 $rowOne->fields[$index] = new ES24DatatableField($table);
             }
         }
+    }
+    
+    public function setSearchable($in)
+    {
+        if($in===true)
+            $this->searchable = true;
+        elseif($in===false)
+            $this->searchable = false;
     }
     
     public function setEditable($in)

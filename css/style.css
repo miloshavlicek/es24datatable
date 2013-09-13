@@ -4,6 +4,17 @@ table.esdata {
     border: 1px solid #000;
     overflow: hidden;
 }
+.esdata button {
+    background-color: #93cf31;
+    border: 0;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+.esdata button:hover {
+    background-color: #444;
+}
 .esdata th, .esdata td {
     padding: 5px 15px;
     border: 0;
