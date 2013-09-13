@@ -5,6 +5,9 @@ include_once __DIR__.'/../source/class.ES24Datatable.php';
 $table = new ES24Datatable;
 $table->addClass('esdata');
 $table->setSearchLine(true);
+$table->setPagination(true);
+$table->setPaginationShowSetter(true);
+$table->setPaginationShowCount(true);
 
 $col = $table->addColumn();
 $col->setHeading('Name');

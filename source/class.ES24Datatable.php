@@ -18,6 +18,14 @@ class ES24Datatable {
     public $checkable;
     public $moveable;
     public $searchLine;
+    public $pagination;
+    public $paginationRows;
+    public $paginationText;
+    public $paginationShowSetter;
+    public $paginationSetterText;
+    public $paginationShowCount;
+    public $paginationCountTextPre;
+    public $paginationCountTextAfter;
     
     public function __construct()
     {
@@ -27,6 +35,38 @@ class ES24Datatable {
         $this->checkable = false;
         $this->moveable = false;
         $this->searchLine = false;
+        $this->pagination = false;
+        $this->paginationRows = 50;
+        $this->paginationText = 'Page';
+        $this->paginationShowSetter = false;
+        $this->paginationSetterText = 'records per page';
+        $this->paginationShowCount = false;
+        $this->paginationCountTextPre = '(Showed';
+        $this->paginationCountTextAfter = 'records)';
+    }
+    
+    public function setPaginationShowCount($in)
+    {
+        if($in===true)
+            $this->paginationShowCount = true;
+        elseif($in===false)
+            $this->paginationShowCount = false;
+    }
+    
+    public function setPaginationShowSetter($in)
+    {
+        if($in===true)
+            $this->paginationShowSetter = true;
+        elseif($in===false)
+            $this->paginationShowSetter = false;
+    }
+    
+    public function setPagination($in)
+    {
+        if($in===true)
+            $this->pagination = true;
+        elseif($in===false)
+            $this->pagination = false;
     }
     
     public function setSearchLine($in)

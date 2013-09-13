@@ -138,6 +138,40 @@ final class ES24DatatableOut {
             
         }
         
+        // Generate pagination
+        if($table->pagination===true)
+        {
+            $out .= '<tr>';
+
+            if($table->moveable===true)
+            {
+                $out .= '<th class="esgrippy">&nbsp;</th>';
+            }
+
+            if($table->checkable===true)
+            {
+                $out .= '<th class="escheck">&nbsp;</th>';
+            }
+
+            $out .= '<td class="espaginationrow" colspan="'.count($table->cols).'">';
+
+            if($table->paginationShowSetter===true)
+            {
+                $out .= '<span class="espaginationset">'.$table->paginationRows.' '.$table->paginationSetterText.'</span>';
+            }
+            
+            if($table->paginationShowCount===true)
+            {
+                $out .= '<span class="escount">'.$table->paginationCountTextPre.' '.count($table->rows).' '.$table->paginationCountTextAfter.'</span>';
+            }
+            
+            $out .= '<span class="espaginationpages">'.$table->paginationText.' 1 / 1 </span>';
+
+            $out .= '</td>';
+
+            $out .= '</tr>';
+        }
+        
         $out .= '</table>';
         
         return $out;

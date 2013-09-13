@@ -8,6 +8,7 @@ table.esdata {
     padding: 5px 15px;
     border: 0;
     overflow: hidden;
+    position: relative;
 }
 .esdata th {
     background-color: #93cf31;
@@ -42,6 +43,26 @@ th.essearchbox {
 }
 .essearchbox input:hover {
     opacity: 1;
+}
+.espaginationrow {
+    text-align: right;
+}
+.escount {
+    float: left;
+    position: relative;
+    top: 8px;
+    font-size: 90%;
+}
+.espaginationrow:hover {
+    background-color: #fff;
+}
+.espaginationpages {
+    position: relative;
+    top: 5px;
+}
+.espaginationset {
+    float: left;
+    padding: 5px 10px; 
 }
 td.esgrippy {
     background: transparent url('./img/grippy.png') no-repeat;
