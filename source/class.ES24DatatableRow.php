@@ -39,4 +39,13 @@ class ES24DatatableRow {
         return $this->fields;
     }
     
+    public function setFieldContent($index,$content)
+    {
+        if(isset($this->fields[$index]))
+        {
+            $this->fields[$index]->setContent($content);
+        }
+        
+    }
+    
 }

@@ -9,10 +9,31 @@ table.esdata {
     border: 0;
 }
 .esdata th {
-    background-color: #222;
+    background-color: #93cf31;
     color: #fff;
     cursor: pointer;
 }
 .esdata td {
     border-bottom: 1px solid #ccc;
+}
+.esdata tr:hover {
+    background-color: #f0d600;
+}
+td.esgrippy {
+    background: transparent url('./img/grippy.png') no-repeat;
+    background-position: 5px 7px;
+    padding: 0 !important;
+    cursor: pointer;
+}
+th.esgrippy {
+    padding: 0 !important;
+    width: 15px;
+}
+td.escheck {
+    padding: 2px 0 0 0 !important;
+    text-align: center;
+}
+th.escheck {
+    padding: 0 !important;
+    width: 25px;
 }

@@ -53,6 +53,17 @@ final class ES24DatatableOut {
         
         // Generate heading
         $out .= '<tr>';
+        
+        if($table->moveable===true)
+        {
+            $out .= '<th class="esgrippy">&nbsp;</th>';
+        }
+        
+        if($table->checkable===true)
+        {
+            $out .= '<th class="escheck">&nbsp;</th>';
+        }
+        
         foreach($table->cols as $colKey => $colOne)
         {
             
@@ -68,6 +79,15 @@ final class ES24DatatableOut {
             
             $out .= '<tr>';
             
+            if($table->moveable===true)
+            {
+                $out .= '<td class="esgrippy">&nbsp</td>';
+            }
+            
+            if($table->checkable===true)
+            {
+                $out .= '<td class="escheck"><input type="checkbox" /></td>';
+            }
             
             foreach($table->cols as $colKey => $colOne)
             {

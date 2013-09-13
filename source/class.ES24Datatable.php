@@ -15,17 +15,37 @@ class ES24Datatable {
     public $rows;
     public $cols;
     public $classes;
+    public $checkable;
+    public $moveable;
     
     public function __construct()
     {
         $this->rows = array();
         $this->cols = array();
         $this->classes = array();
+        $this->checkable = false;
+        $this->moveable = false;
     }
     
     public function addClass($in)
     {
         $this->classes[] = $in;
+    }
+    
+    public function setCheckable($in)
+    {
+        if($in===true)
+            $this->checkable = true;
+        elseif($in===false)
+            $this->checkable = false;
+    }
+    
+    public function setMoveable($in)
+    {
+        if($in===true)
+            $this->moveable = true;
+        elseif($in===false)
+            $this->moveable = false;
     }
     
     public function addRow()
@@ -38,7 +58,7 @@ class ES24Datatable {
         
         $rowNew =& $rows[$index];
         
-        return $rows;
+        return $rows[$index];
     }
     
     public function addColumn()

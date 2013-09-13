@@ -14,7 +14,7 @@ final class ES24DatatableField {
     {
         $this->table =& $table;
         
-        $this->content = 1;
+        $this->content = null;
     }
     
     public function getContent()
