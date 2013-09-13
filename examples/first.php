@@ -41,9 +41,26 @@ $tableHtml = $table->getOutTable();
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
         <script type="text/javascript" src="../js/script.js"></script>
+        <style>
+            body {
+                background: #eee;
+                margin-top: 0;
+                font-family: Calibri;
+            }
+            #page {
+                margin: 0 auto;
+                width: 920px;
+                padding: 10px 30px 50px 30px;
+                margin: 0 auto;
+                background: #fff;
+            }
+        </style>
     </head>
     <body>
-        <h2>Simple Table Example</h2>
-        <?=$tableHtml?>
+        <div id="page">
+            <h1>ES24Datatable - Examples</h1>
+            <h2>Simple Table Example</h2>
+            <?=$tableHtml?>
+        </div>
     </body>
 </html>

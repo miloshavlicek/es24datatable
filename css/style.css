@@ -26,16 +26,19 @@ table.esdata {
 td.eseditable {
     border: 2px solid #f0d600;
 }
-.essearchbox {
+th.essearchbox {
     position: relative;
     padding: 0 !important;
 }
 .essearchbox input {
+    display: block;
     width: 100%;
     height: 100%;
     opacity: 0.5;
-    padding: 5px 0;
-    margin: 0;
+    padding: 5px 15px;
+    margin: 0 0 0 0;
+    left: 0;
+    right: 0;
 }
 .essearchbox input:hover {
     opacity: 1;
@@ -51,7 +54,7 @@ th.esgrippy {
     width: 15px;
 }
 td.escheck {
-    padding: 2px 0 0 0 !important;
+    padding: 0 0 0 0 !important;
     text-align: center;
 }
 th.escheck {
