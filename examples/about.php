@@ -57,11 +57,34 @@ $tableHtml = $table->getOutTable();
                 margin: 0 auto;
                 background: #fff;
             }
+            .paragraph {
+                padding-left: 20px;
+                width: 500px;
+                font-size: 25px;
+                color: #444;
+            }
+            #github {
+                position: fixed;
+                right: 100px;
+                top: 0;
+                background-color: #666;
+                color: #fff;
+                padding: 10px 30px;
+                font-size: 25px;
+                cursor: pointer;
+            }
+            #github:hover {
+                background-color: #222;
+            }
         </style>
     </head>
     <body>
+        <div id="github" onclick="window.location.href='https://github.com/miloshavlicek/ES24Datatable';">github</div>
         <div id="page">
-            <h1>ES24Datatable - Examples</h1>
+            <h1>ES24Datatable</h1>
+            <p class="paragraph">
+                Create amazing tables in php easily!<br />
+                With ES24Datatable class you can show, search, edit and sort thousands of your records from database or any other source.
             <h2>Simple Table Example</h2>
             <?=$tableHtml?>
         </div>
