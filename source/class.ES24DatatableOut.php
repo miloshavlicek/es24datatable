@@ -67,7 +67,40 @@ final class ES24DatatableOut {
         foreach($table->cols as $colKey => $colOne)
         {
             
-            $out .= '<th>'.$colOne->getHeading().'</th>';
+            $out .= '<th>'.$colOne->getHeading();
+               
+            if($colOne->sortable===true)
+            {
+                $out .= ' <span class="essortable">&harr;</span>  ';
+            }
+
+            $out .= '</th>';
+            
+            
+        }
+        $out .= '</tr>';
+        
+        // Generate search line
+        $out .= '<tr>';
+        
+        if($table->moveable===true)
+        {
+            $out .= '<th class="esgrippy">&nbsp;</th>';
+        }
+        
+        if($table->checkable===true)
+        {
+            $out .= '<th class="escheck">&asymp;</th>';
+        }
+        
+        foreach($table->cols as $colKey => $colOne)
+        {
+            
+            $out .= '<th class="essearchbox">';
+               
+            $out .= '<input type="text" />';
+
+            $out .= '</th>';
             
             
         }
@@ -91,7 +124,14 @@ final class ES24DatatableOut {
             
             foreach($table->cols as $colKey => $colOne)
             {
-                $out .= '<td>'.$rowOne->getField($colKey)->getContent().'</td>';
+                $out .= '<td';
+                
+                if($colOne->editable===true)
+                {
+                    $out .= ' class="eseditable" ';
+                }
+                
+                $out .= '>'.$rowOne->getField($colKey)->getContent().'</td>';
             }
             
             $out .= '</tr>';

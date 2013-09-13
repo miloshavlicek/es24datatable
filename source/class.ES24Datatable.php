@@ -17,6 +17,7 @@ class ES24Datatable {
     public $classes;
     public $checkable;
     public $moveable;
+    public $searchLine;
     
     public function __construct()
     {
@@ -25,6 +26,15 @@ class ES24Datatable {
         $this->classes = array();
         $this->checkable = false;
         $this->moveable = false;
+        $this->searchLine = false;
+    }
+    
+    public function setSearchLine($in)
+    {
+        if($in===true)
+            $this->searchLine = true;
+        elseif($in===false)
+            $this->searchLine = false;
     }
     
     public function addClass($in)

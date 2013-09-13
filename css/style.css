@@ -2,11 +2,12 @@
 
 table.esdata {
     border: 1px solid #000;
-    border-collapse: collapse;
+    overflow: hidden;
 }
 .esdata th, .esdata td {
     padding: 5px 15px;
     border: 0;
+    overflow: hidden;
 }
 .esdata th {
     background-color: #93cf31;
@@ -18,6 +19,26 @@ table.esdata {
 }
 .esdata tr:hover {
     background-color: #f0d600;
+}
+.essortable:hover {
+    color: #f0d600;
+}
+td.eseditable {
+    border: 2px solid #f0d600;
+}
+.essearchbox {
+    position: relative;
+    padding: 0 !important;
+}
+.essearchbox input {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    padding: 5px 0;
+    margin: 0;
+}
+.essearchbox input:hover {
+    opacity: 1;
 }
 td.esgrippy {
     background: transparent url('./img/grippy.png') no-repeat;

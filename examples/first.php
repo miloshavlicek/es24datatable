@@ -3,14 +3,22 @@
 include_once __DIR__.'/../source/class.ES24Datatable.php';
 
 $table = new ES24Datatable;
-
 $table->addClass('esdata');
+$table->setSearchLine(true);
 
-$table->addColumn()->setHeading('Name');
-$table->addColumn()->setHeading('Short Info');
+$col = $table->addColumn();
+$col->setHeading('Name');
+$col->setSortable(true);
+unset($col);
+
+$col = $table->addColumn();
+$col->setHeading('Short Info');
+$col->setEditable(true);
 
 $table->addColumn();
-$table->addColumn()->setHeading('Action');
+
+$col = $table->addColumn();
+$col->setHeading('Action');
 
 $row = $table->addRow();
 $row->setFieldContent(0,'John');

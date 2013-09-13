@@ -11,11 +11,15 @@ final class ES24DatatableColumn {
     private $minWidth; // in px - int
     private $rows;
     private $cols;
+    public $sortable;
+    public $editable;
     
     public function __construct(&$table)
     {
         $this->heading = null;
         $this->minWidth = 200;
+        $this->sortable = false;
+        $this->editable = false;
         
         $this->rows =& $table->rows;
         $this->cols =& $table->cols;
@@ -31,6 +35,22 @@ final class ES24DatatableColumn {
                 $rowOne->fields[$index] = new ES24DatatableField($table);
             }
         }
+    }
+    
+    public function setEditable($in)
+    {
+        if($in===true)
+            $this->editable = true;
+        elseif($in===false)
+            $this->editable = false;
+    }
+    
+    public function setSortable($in)
+    {
+        if($in===true)
+            $this->sortable = true;
+        elseif($in===false)
+            $this->sortable = false;
     }
     
     public function getHeading()
