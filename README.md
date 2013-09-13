@@ -1,4 +1,4 @@
-tablegrid
+ES24Datatable
 =========
 
-Tablegrid is class for easy generating tables in php
+ES24Datatable is class for easy generating tables in php

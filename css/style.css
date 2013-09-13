@@ -1,0 +1,18 @@
+/* ES24Datatable */
+
+table.esdata {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+.esdata th, .esdata td {
+    padding: 5px 15px;
+    border: 0;
+}
+.esdata th {
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+}
+.esdata td {
+    border-bottom: 1px solid #ccc;
+}
