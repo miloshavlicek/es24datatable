@@ -1,5 +1,6 @@
 {
     "name": "miloshavlicek/es24datatable",
+    "license": "BSD-3-Clause",
     "require": {
     },
     "config": {
